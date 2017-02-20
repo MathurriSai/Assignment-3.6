@@ -1,0 +1,52 @@
+1)	Can you overload a method with the same return type? Explain your answer with proper logic.
+
+   Yes, it is possible to overload method with same return type but under one condition that the argumnt list should be different. under the
+condition if teh arguments are same as that of other argument name then the argument sequence must be atleast changed then.
+
+* The meaning of method overlaoding is to have two o moree mthods which holds the same name as well same class but with different arguments.
+and its benefit is that it allows to implement methods which supports the sematic operation but with a different agumnet type or name. 
+  
+Important Points:
+
+* Argument list must be changed for overloading method
+* Return type can be changed in overloading method
+* Access modifier can also be changed.
+* Under a same class and sb-class method can be over loaded.
+
+import java.util.*;
+public class acad
+{
+public static int acadgild(int n1 , int n2)
+    {
+		int s=n1+n2;
+		return s;
+	}
+public static int acadgild(String string)
+{
+	int i=0,n,s=0;
+	while(i<string.length()) 
+	{
+		char c=string.charAt(i);	//getting character from the given string
+		n = c;	//  getting ASCII value from each charatcter  
+		sum=s+n; //summating ASCII values
+		i=i+1;
+	}
+	return sum;
+}
+public static void main(String args[])
+{
+	Scanner s= new Scanner(System.in);
+	System.out.println("Enter two numbers:");
+	int num1 = Integer.parseInt(s.nextLine());	
+	int num2 = Integer.parseInt(s.nextLine());
+	System.out.println("Enter the string:");
+	String string= s.nextLine();
+	System.out.println("Result");
+	System.out.println("Sum of two numbers: "+acadgild(num1,num2));   //method sum with two argumnets
+	System.out.println("Sum of ASCII values :"+acadgild(string));   // method sum with single argument
+	}
+}  
+
+
+Here we can see that the method sum has the same return type but argument list is different one gives actual sum and the other gives 
+the sum of the ASCII values of the character in the string.
