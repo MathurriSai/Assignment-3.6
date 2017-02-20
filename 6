@@ -48,5 +48,35 @@ public static void main(String args[])
 }  
 
 
-Here we can see that the method sum has the same return type but argument list is different one gives actual sum and the other gives 
-the sum of the ASCII values of the character in the string.
+*In the above example for the method sum has the same return type whereas it has a different argument list .
+*The first output gives the sum of characters and second gives the sum of ASCII values.
+
+---------------------------------------------------------------------------------------------------------------------------------
+2)	Write a program in Java using Arrays, which sorts the element in a descending order.
+
+
+import java.util.*;
+
+public class acad
+{
+	public static void main(String args[])
+	{
+		Scanner s= new Scanner(System.in);
+		Integer[] descend= new Integer[3];	//we take the input of three integers
+		System.out.println("Enter the 3 integers ");
+		for (int i=0;i<3;i++)
+		{
+			descend[i]=s.nextInt();	//getting value for array
+		}
+		Arrays.sort(descend, Collections.reverseOrder());//output of array in descending order
+		System.out.println("Descending order of the given numbers is:");
+		int n=descend.length;
+		for (int i=0;i<n;i++)
+		{
+			System.out.println(descend[i]);	//to print the output
+		}
+	}
+}
+
+Here the input string value is already given as three. and it was received from the user.by using sort and reverse the output is
+obtained in necessary reverse order.
